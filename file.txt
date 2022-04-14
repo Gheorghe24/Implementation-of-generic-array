@@ -1,0 +1,21 @@
+if(*arr == NULL) {
+		*arr = (void *)malloc(sizeof(unsigned char) + sizeof(unsigned int) + data->header->len);
+		// void *tmp = *arr;
+	printf("Am intrat3\n");
+	// memcpy(tmp,data->header->type, sizeof(unsigned char));
+	// len_arr = len_arr + sizeof(unsigned char);
+	// printf("Am intrat4\n");
+	// memcpy(tmp + len_arr,data->header->len, sizeof(unsigned int));
+	// len_arr = len_arr + sizeof(unsigned int);
+	}
+	// if(*arr == NULL) {
+	// 	memcpy(*arr, tmp, len_arr);
+	// } else {
+	// 	*arr = (void*)realloc(*arr,len_arr + *len);
+	// 	if(*arr == NULL) {
+	// 		free(tmp);
+	// 		return -1;
+	// 	}
+	// }
+	// free(tmp);
+	
