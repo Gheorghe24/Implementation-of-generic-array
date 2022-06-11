@@ -1,6 +1,8 @@
-TEMA 1 IOCLA
+TEMA 1 IOCLA (Anul I)
+----------------------
 
 Main:
+
 Pentru inceput am alocat comenzile pe care urma sa le citesc de la tastura si acele 2 structuri.
 Precizez ca in structura am alocat exact numarul de biti pe care ii foloseste fiecare cuvant si doar am citit pe o lungime maxima(nu am citit sa fi interzis asta).
 Apoi folosesc un while pana la comanda exit cu fiecare instructiune in parte
