@@ -3,39 +3,51 @@
 Main:
 -------
 
-Pentru inceput am alocat comenzile pe care urma sa le citesc de la tastura si acele 2 structuri.
-Precizez ca in structura am alocat exact numarul de biti pe care ii foloseste fiecare cuvant si doar am citit pe o lungime maxima(nu am citit sa fi interzis asta).
-Apoi folosesc un while pana la comanda exit cu fiecare instructiune in parte
-Cea mai dificila din acestea e insert(insert_at e exact aceeasi cu o mica diferenta).
-Astfel, citest primele 2 inputuri si apoi aloc in date exact numarul de biti de care am nevoie.Aloc de fiecare data si structura in care retin datele si apoi o dezaloc.Pentru fiecare tip de intrare(1,2,3) initializez inturi si citesc inturi conform instructiunilor si le salvez apoi in structura cu ajutorul lui memcpy si lungimii fiecarui tip.Pentru fiecare salvare in structura maresc lungimea care ma ajuta sa parcurg mai usor si sa stiu unde sa pun fiecare bit.
-Citest ultimul cuvant(dedicatul)si de asemenea realoc memorie si ptu acesta pentru a-l insera.
-Apoi folosesc functia Add_last si dezaloc memorie ptu date->data
-Celelalte cazuri sunt foarte usor de inteles de aceea am zis sa nu fac o explicatie aparte.
+For the beginning I allocated the commands that I was going to read from the keyboard and those 2 structures.
+I specify that in the structure I allocated exactly the number of bits that each word uses and I only read on a maximum length.
+Then I use a while loop until the "exit" command with each instruction
+
+The most difficult part of these is insert.
+
+For each type of input I initiate the variables and read them according the instructions, next I save them in the structure with the help of memcpy and the length of each type. I increase the length which helps me to go easier and know where to put each bit.
+
+After that I read the last word and also reallocate the memory to insert it.
+Then I use the Add_last function and allocate memory for data->data.
+
+The other cases are very easy to understand so I said not to make a separate explanation.
 
 ADD_LAST:
 ------------
-Folosesc un pointer auxiliar de tip void in care salvez structura data ca parametru
-Parcurg structura si o salvez ca pe un "vector de biti".Am nevoie sa fac cast intotdeuna in dependenta de valorile pe care le am in structura si copiez datele acestea in auxiliarul "tmp".De asemenea calculez lungimea lui data in timp ce parcurg si inserez in tmp.
-Dupa aceasta am 2 cazuri, cand vectorul arr e gol si doar aloc memorie ptu acesta si copii auxiliarul meu sau atunci cand nu e gol si e nevoie sa realoc memorie pentru a mai insera un element.Calculez intotdeaua lungimea intregului arr ca sa stiu cu cat ar trebui sa realoc si de unde sa inserez elementul.
+I use an auxiliary void pointer in which I save the given structure as a parameter
+
+I go through the structure and save it as a "bit vector". 
+I need to always use casting depending on the values I have in the structure and copy this data to the "tmp" auxiliary. I also calculate the length of the "date" structure as I go through and insert it in tmp.
+
+After this I have 2 cases:
+1.when the vector is empty and I only allocate memory for it and my auxiliary children  2.when it is not empty and I need to reallocate memory to insert another element.
+
+I always calculate the length of the whole "arr" to know how much I should reallocate and where to insert the element.
 
 ADD_AT:
 -----------
-Exista 3 cazuri:
-1.index mai mic ca 0, returnez eroare
-2.index mai mare decat len,adaug la final
-3.inserez in vector :
-Prima data parcurg arr pana la final si aflu lungimea, de asemenea aflu lungimea pana la index
-Intr-un alt auxiliar salvez datele ca un element din vector si de asemenea salvez intr-o variabila lungimea acestuia. Realoc memorie inca pentru acest element si aflu pozitia de unde ar trebui sa inserez(Aux2).
-Mut elementele de dupa index pana la aux2 + lungimea elementului inserat si apoi in inserez pe acesta.
-dezaloc memorie pentru auxiliarul alocat
+There are 3 cases:
+1.index less than 0, return error
+2.index higher than len, I add at the end
+3.insert in array:
+The first time I go through the "arr" to the end and find the length, I also find the length to the index
+In another auxiliar I save the data as an element in the vector and I also save in a variable its length. I still reallocate memory for this element and find the position from where I should insert (Aux2).
+Next I move the elements after the index to aux2 + the length of the inserted element and then insert it on it.
+Finally, I deallocated memory for the assigned auxiliary
 
 Find:
 ----------
-la fel sunt 3 cazuri, ptu cazul in care caut in vector,parcurg pana la index la fel ca in functiile precedente si printez apoi exact de la aux o un element din arr cu ajutorul functiei print creata mai jos.
+There are also 3 cases, in case I look in the array, I go to the index as in the previous functions and then I print exactly from aux an element of "arr" with the help of the print function created below.
 
 Delete_at:
 ----------
 La fel ca in cazul functiei add_at parcurg vectorul pana la final si ma folosesc de pointeri auxiliari pentru a-mi salva anumite pozitii importante.De asemenea calculez lungimea totala a vectorului, lungimea elementului pe care e nevoie sa il sterg si doar mut pointerii de la finalul elementului index(lungimea len_aux) la inceputul acestuia (arr + len1(lungimea pana la index)). Realoc mai putina memorie, la fel cu lungimile salvate si scad lungimea (len) 
+
+As with the add_at function, I go through the vector to the end and use auxiliary pointers to save some important positions. the end of the index element (length len_aux) at the beginning of it (arr + len1 (length to index)). Reallocate less memory, same as saved lengths and decrease length (len)
 
 Print:
 ---------
