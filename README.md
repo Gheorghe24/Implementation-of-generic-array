@@ -45,15 +45,13 @@ There are also 3 cases, in case I look in the array, I go to the index as in the
 
 Delete_at:
 ----------
-La fel ca in cazul functiei add_at parcurg vectorul pana la final si ma folosesc de pointeri auxiliari pentru a-mi salva anumite pozitii importante.De asemenea calculez lungimea totala a vectorului, lungimea elementului pe care e nevoie sa il sterg si doar mut pointerii de la finalul elementului index(lungimea len_aux) la inceputul acestuia (arr + len1(lungimea pana la index)). Realoc mai putina memorie, la fel cu lungimile salvate si scad lungimea (len) 
-
-As with the add_at function, I go through the vector to the end and use auxiliary pointers to save some important positions. the end of the index element (length len_aux) at the beginning of it (arr + len1 (length to index)). Reallocate less memory, same as saved lengths and decrease length (len)
+As with the add_at function, I go through the array to the end and use auxiliary pointers to save some important positions. the end of the index element (length len_aux) at the beginning of it (arr + len1 (length to index)). Reallocate less memory, same as saved lengths and decrease length (len)
 
 Print:
 ---------
+With the help of a repetitive for-type structure, I traverse the whole vector with an index to its length (len = number of elements in the vector);
+I take the first element by casting the arr position with an unsigned char to take exactly the "type" given from the keyboard saved in the structure and then in each element.
+I print the type (that's how I give it the name to use it further). This way I get to the position where I have those 2 banknotes, but I have to display the second name first and that's why I print arr + sizeof (the 2 types of numbers together). Then I display the banknotes and I can move on. in the array with their size.
 
-Cu ajutorul unei structuri repetitive de tip for parcurg tot vectorul cu un index pana la lungimea acestuia(len = numarul de elemente din vector);
-Iau primul element castand pozitia arr cu un unsigned char pentru a lua exact "type-ul" dat de la tastatura salvat in structura si dupa in fiecare element
-Printez type-ul(chiar asa ii dau numele pentru a-l folosi mai departe).Dupa asta ma misc(misc arr) cu exact lungimea charului si apoi cu bitii lui "header-len". Astfel ajung in pozitia in care am acele 2 bancnote, insa eu trebuie sa afisez mai intai cel de-al doilea nume si de aceea printez arr+sizeof(cele 2 tipuri de numere adunate).Apoi afisez bancnotele si pot sa ma musc mai departe in array cu marimea acestora.
-Dupa ce ies din aceste 3 cazuri(3 tipuri), ma misc cu bitii celui de-al doilea cuvant pentru a ajunge la inceputul urmatorului element.
+After I get out of these 3 cases (3 types), I move with the bits of the second word to get to the beginning of the next element.
 
