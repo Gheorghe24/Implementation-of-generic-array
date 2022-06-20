@@ -23,8 +23,9 @@ I use an auxiliary void pointer in which I save the given structure as a paramet
 I go through the structure and save it as a "bit vector". 
 I need to always use casting depending on the values I have in the structure and copy this data to the "tmp" auxiliary. I also calculate the length of the "date" structure as I go through and insert it in tmp.
 
-After this I have 2 cases: \
-1.when the vector is empty and I only allocate memory for it and my auxiliary children  2.when it is not empty and I need to reallocate memory to insert another element.
+After this I have 2 cases: 
+- when the vector is empty and I only allocate memory for it and my auxiliary children  
+- when it is not empty and I need to reallocate memory to insert another element.
 
 I always calculate the length of the whole "arr" to know how much I should reallocate and where to insert the element.
 
@@ -32,9 +33,9 @@ ADD_AT:
 -----------
 There are 3 cases: 
 
-1.index less than 0, return error \
-2.index higher than len, I add at the end \
-3.insert in array: 
+- index less than 0, return error 
+- index higher than len, I add at the end 
+- insert in array: 
 
 The first time I go through the "arr" to the end and find the length, I also find the length to the index
 In another auxiliar I save the data as an element in the vector and I also save in a variable its length. I still reallocate memory for this element and find the position from where I should insert (Aux2).
