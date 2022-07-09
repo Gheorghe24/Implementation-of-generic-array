@@ -38,7 +38,8 @@ There are 3 cases:
 - insert in array: 
 
 The first time I go through the "arr" to the end and find the length, I also find the length to the index
-In another auxiliar I save the data as an element in the vector and I also save in a variable its length. I still reallocate memory for this element and find the position from where I should insert (Aux2).
+In another auxiliar I save the data as an element in the vector and I also save in a variable its length. 
+I still reallocate memory for this element and find the position from where I should insert (Aux2).
 Next I move the elements after the index to aux2 + the length of the inserted element and then insert it on it.
 Finally, I deallocated memory for the assigned auxiliary
 
