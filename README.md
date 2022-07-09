@@ -52,8 +52,9 @@ As with the add_at function, I go through the array to the end and use auxiliary
 
 Print:
 ---------
-With the help of a repetitive for-type structure, I traverse the whole vector with an index to its length (len = number of elements in the vector);
-I take the first element by casting the arr position with an unsigned char to take exactly the "type" given from the keyboard saved in the structure and then in each element.
+With the help of a repetitive for-type structure, I traverse the whole array with an index to its length (len = number of elements in the array)
+I take the first element by casting the arr position with an unsigned char to take exactly the "type" given from the keyboard 
+saved in the structure and then in each element.
 
 
 I print the type (that's how I give it the name to use it further). This way I get to the position where I have those 2 banknotes, but I have to display the second name first and that's why I print arr + sizeof (the 2 types of numbers together). Then I display the banknotes and I can move on in the array with their size.
