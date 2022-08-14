@@ -1,4 +1,4 @@
-# TEMA 1 IOCLA (Anul I)
+# Generic Array in C
 
 Main:
 -------
